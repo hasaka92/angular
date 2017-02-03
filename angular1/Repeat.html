@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="Scripts/angular.js"></script>
+    <script src="Scripts/ngRepeat.js"></script>
+</head>
+<body ng-app="myModule3">
+
+    <div ng-controller="myController3">
+        <div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Gender</th>
+                        <th>Salary</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="emp in emps">
+                        <td>{{emp.firstName}}</td>
+                        <td>{{emp.lastName}}</td>
+                        <td>{{emp.gender}}</td>
+                        <td>{{emp.salary}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div>
+            <ul>
+                <li ng-repeat="cnty in country" ng-init="parentIndex=$index">
+                    {{cnty.countryName}} - index = {{$index}}
+                    <ul>
+                        <li ng-repeat="cty in cnty.cities">
+                            {{cty.name}}  - Parent Index ={{parentIndex}} - index = {{$index}}
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+</html>

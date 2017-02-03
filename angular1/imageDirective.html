@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="Scripts/angular.js"></script>
+    <script src="Scripts/Direct.js"></script>
+</head>
+<body ng-app="myModule1">
+
+    <div ng-controller="myController1">
+        <div>
+            Country name: {{cntry.name}}
+        </div>
+        <div>
+            Capital of Country: {{cntry.capital}}
+        </div>
+        <div>
+            <img ng-src="{{cntry.flag}}" height="159" width="318" alt="{{cntry.name + ' flag '}}"/>
+        </div>
+    </div>
+
+</body>
+</html>
